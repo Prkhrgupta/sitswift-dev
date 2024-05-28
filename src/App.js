@@ -1,8 +1,9 @@
+import BasicTable from './components/Table.js' 
 
 function App() {
   return (
     <div className="App">
-      <h1>TEST</h1>
+      <BasicTable />
     </div>
   );
 }
