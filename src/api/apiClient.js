@@ -32,9 +32,9 @@ export const getAllTransactions = async () => {
 };
 
 
-export const creatransaction = async (data) => {
+export const createTransaction = async (data) => {
   try {
-    const response = await apiClient.post('', data);
+    const response = await apiClient.post('/transaction', data);
     return response.data;
   } catch (error) {
     console.error('Error creating item:', error);

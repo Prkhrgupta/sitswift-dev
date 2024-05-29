@@ -1,10 +1,18 @@
-import BasicTable from './components/Table.js' 
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from '../src/components/Home';
+import BasicTable from './components/Table';
+import CreateTransaction from './components/CreateTransaction';
 
 function App() {
   return (
-    <div className="App">
-      <BasicTable />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/transaction-list" element={<BasicTable />} />
+        <Route path="/create-transaction" element={<CreateTransaction />} />
+      </Routes>
+    </Router>
   );
 }
 
